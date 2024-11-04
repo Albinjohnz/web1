@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Listings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Image Container -->
+  <div class="background-image"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">Property Listings</a>
+      </div>
+      <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search properties...">
+        <button onclick="searchProperties()">Search</button>
+      </div>
+      <div class="nav-links">
+        <a href="#categories">Categories</a>
+        <div class="dropdown">
+          <button class="dropbtn">More</button>
+          <div class="dropdown-content">
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="slideshow" class="carousel">
+    <!-- Carousel images will be inserted dynamically -->
+  </div>
+
+  <!-- Property Cards Section -->
+  <section id="property-cards" class="card-container">
+    <!-- Cards will be dynamically inserted here by script.js -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
