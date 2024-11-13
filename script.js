@@ -9,13 +9,13 @@ async function fetchProperties() {
 
     // Initialize carousel and property cards
     if (document.getElementById("slideshow")) {
-      loadCarousel(); // Load carousel on index.html
-      startSlideshow(); // Start the slideshow effect
+      loadCarousel(); 
+      startSlideshow(); 
     }
     if (document.getElementById("property-cards")) {
-      loadPropertyCards(properties); // Load property cards on index.html
+      loadPropertyCards(properties); 
     } else if (window.location.pathname.endsWith("property.html")) {
-      loadPropertyDetails(); // Load details on property.html
+      loadPropertyDetails(); 
     }
   } catch (error) {
     console.error("Failed to load properties data:", error);
@@ -32,7 +32,7 @@ function loadCarousel() {
     const img = document.createElement("img");
     img.src = property.featuredImage;
     img.alt = property.name;
-    if (index === 0) img.classList.add("active"); // Set the first image as active
+    if (index === 0) img.classList.add("active"); 
     slideshow.appendChild(img);
   });
 }
@@ -44,13 +44,13 @@ function startSlideshow() {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("active");
-  }, 3000); // Change slide every 3 seconds
+  }, 5000); 
 }
 
 // Function to load properties as cards on index.html
 function loadPropertyCards(propertiesToDisplay = properties) {
   const cardContainer = document.getElementById("property-cards");
-  cardContainer.innerHTML = ''; // Clear container for fresh load
+  cardContainer.innerHTML = ''; 
 
   propertiesToDisplay.forEach(property => {
     const card = document.createElement("div");
@@ -101,7 +101,6 @@ function loadPropertyDetails() {
     // Populate property carousel with images
     const carousel = document.getElementById("property-carousel");
     carousel.innerHTML = ''; // Clear previous images
-
     // Add featured and other images to the carousel
     const featuredImg = document.createElement("img");
     featuredImg.src = property.featuredImage;
@@ -124,7 +123,7 @@ function reserveViewing() {
   window.location.href = `reservation.html`;
 }
 
-// Enhanced search function that displays filtered results as cards
+// search function that displays filtered results as cards
 function searchProperties() {
   const searchTerm = document.getElementById("searchBar").value.toLowerCase();
   const results = properties.filter(property =>
@@ -134,7 +133,7 @@ function searchProperties() {
 
   // Display search results as cards
   if (results.length > 0) {
-    loadPropertyCards(results); // Display results as cards
+    loadPropertyCards(results); 
   } else {
     document.getElementById("property-cards").innerHTML = "<p>No properties found matching your search.</p>";
   }
