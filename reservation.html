@@ -14,15 +14,15 @@
       <div class="logo">
          <!-- Back Button -->
       <button onclick="goBack()" class="back-button">Back</button>
-        <a href="./index.html">Property Listings</a>
+      <a href="index.html"></a>
+        <img src="./my-house-finder-high-resolution-logo.png" alt="Logo" class="logo-img">
+        <a href="./index.html">My House Finder</a>
       </div>
       <div class="nav-links">
-        <a href="#categories">Categories</a>
         <div class="dropdown">
           <button class="dropbtn">More</button>
           <div class="dropdown-content">
             <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
             <a href="#faq">FAQ</a>
           </div>
         </div>
@@ -46,7 +46,14 @@
       <button type="submit">Submit Reservation</button>
     </form>
   </div>
-
+  <div id="reservation-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Reservation Confirmed</h2>
+      <p id="popup-message"></p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>

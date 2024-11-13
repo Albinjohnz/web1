@@ -55,7 +55,8 @@ function loadPropertyCards(propertiesToDisplay = properties) {
   propertiesToDisplay.forEach(property => {
     const card = document.createElement("div");
     card.classList.add("card");
-
+     // Check the category and display accordingly
+    const categoryLabel = property.category === 'To Let' ? 'For Rent' : 'For Sale';
     card.innerHTML = `
       <div class="card-image">
         <img src="${property.featuredImage}" alt="${property.name}">
@@ -65,6 +66,7 @@ function loadPropertyCards(propertiesToDisplay = properties) {
         <p><strong>Location:</strong> ${property.location}</p>
         <p><strong>Price:</strong> ${property.price}</p>
         <p><strong>Bedrooms:</strong> ${property.bedrooms} | <strong>Bathrooms:</strong> ${property.bathrooms}</p>
+        <h3><strong></strong> ${property.category}</h3>
         <button onclick="viewProperty(${property.id})">View Details</button>
       </div>
     `;
@@ -149,6 +151,17 @@ function submitReservation(event) {
   const email = document.getElementById("email").value;
   const date = document.getElementById("date").value;
 
-  alert(`Thank you, ${name}! Your reservation for a viewing on ${date} has been submitted.`);
-  document.getElementById("reserveForm").reset();
+  // custom message 
+  const popupMessage = `Thank you, ${name}! Your reservation for a viewing on ${date} has been submitted.`;
+  document.getElementById("popup-message").innerText = popupMessage;
+
+  // Show 
+  document.getElementById("reservation-popup").style.display = "block";
+}
+
+function closePopup() {
+  // Close the popup
+  document.getElementById("reservation-popup").style.display = "none";
+  // Go back to the previous page
+  window.history.back();
 }

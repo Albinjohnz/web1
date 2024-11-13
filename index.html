@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Property Listings</title>
+  <title>My House Finder</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -15,19 +15,19 @@
   <nav>
     <div class="navbar">
       <div class="logo">
-        <a href="index.html">Property Listings</a>
+        <a href="index.html"></a>
+        <img src="./my-house-finder-high-resolution-logo.png" alt="Logo" class="logo-img">
+        <a href="index.html">My House Finder</a>
       </div>
       <div class="search-container">
         <input type="text" id="searchBar" placeholder="Search properties...">
         <button onclick="searchProperties()">Search</button>
       </div>
       <div class="nav-links">
-        <a href="#categories">Categories</a>
         <div class="dropdown">
           <button class="dropbtn">More</button>
           <div class="dropdown-content">
             <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
             <a href="#faq">FAQ</a>
           </div>
         </div>
@@ -44,7 +44,21 @@
   <section id="property-cards" class="card-container">
     <!-- Cards will be dynamically inserted here by script.js -->
   </section>
-
+   <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; My House Finder. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#privacy-policy">Privacy Policy</a> |
+        <a href="#terms-of-service">Terms of Service</a> |
+      </div>
+      <div class="contact-info">
+        <p><strong>Contact Us:</strong></p>
+        <p>Phone: <a href="tel:+1234567890">+353 89 458 65589</a></p>
+        <p>Email: <a href="mailto:pro">MyHouseFinder@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
   <script src="./script.js"></script>
 </body>
 </html>

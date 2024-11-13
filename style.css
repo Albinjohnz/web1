@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   /* Background Image */
   .background-image {
     position: fixed;
@@ -24,6 +25,7 @@
     height: 50vh;
     overflow: hidden;
     margin-bottom: 20px;
+    opacity: 0.8;
   }
   
   #slideshow img {
@@ -50,7 +52,18 @@
     color: white;
     padding: 15px 30px;
   }
+  /* Logo Section */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
   
+  .logo img {
+    width: 40px;  
+    height: auto;
+    margin-right: 10px;  
+    border-radius: 50%;
+  }
   .logo a {
     font-size: 1.5em;
     color: #fff;
@@ -231,7 +244,7 @@
   }
   /* Property Details Page Styling */
   #property-details {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -277,20 +290,21 @@
   }
   
   /* Reserve Viewing Button */
-  #property-info button {
-    background-color: #28a745;
+  .reserve-viewing{
+    background-color: #ff6347; 
     color: white;
-    padding: 12px 20px;
+    padding: 18px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; 
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.2em; 
     margin-top: 20px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
   }
   
-  #property-info button:hover {
-    background-color: #218838;
+  .reserve-viewing:hover {
+    background-color: #ff4500;
+    transform: scale(1.05); 
   }
   
   /* Responsive for Mobile */
@@ -317,7 +331,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-  
+
   #reservation-form h2 {
     margin-bottom: 20px;
     color: #333;
@@ -368,5 +382,114 @@
   
   .back-button:hover {
     background-color: #2980b9; /* Darker shade on hover */
+  }
+  
+  /* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #f39c12;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 14px;
+  }
+  .contact-info {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .contact-info a {
+    color: #f39c12;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: #fff;
+  }
+  
+  .contact-info strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  /* The Modal (background) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+  }
+  
+  /* Modal Content */
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  /* The Close Button */
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Popup Button */
+  .popup button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .popup button:hover {
+    background-color: #218838;
   }
   
